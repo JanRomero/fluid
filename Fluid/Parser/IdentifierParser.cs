@@ -102,10 +102,6 @@ namespace Fluid.Parser
         }
 
         private static bool IsNonDigitStart(char ch)
-            =>
-               (ch >= 'a' && ch <= 'z') ||
-               (ch >= 'A' && ch <= 'Z') ||
-                (ch == '_')
-            ;
+            => char.IsLetter(ch) || ch == '_';
     }
 }
